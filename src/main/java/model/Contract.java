@@ -2,14 +2,14 @@ package model;
 public class Contract {
 
     private String cotractNumber;
-    private String name;
+    private String personName;
     private String cpf;
     private String email;
 
     // Construtor
-    public Contract(String cotractNumber, String name, String cpf, String email) {
+    public Contract(String cotractNumber, String personName, String cpf, String email) {
         this.cotractNumber = cotractNumber;
-        this.name = name;
+        this.personName = personName;
         this.cpf = cpf;
         this.email = email;
     }
@@ -23,12 +23,12 @@ public class Contract {
         this.cotractNumber = cotractNumber;
     }
 
-    public String getName() {
-        return name;
+    public String getPersonName() {
+        return personName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPersonName(String personName) {
+        this.personName = personName;
     }
 
     public String getCpf() {
