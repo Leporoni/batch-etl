@@ -6,7 +6,6 @@ public class Contract {
     private String cpf;
     private String email;
 
-    // Construtor
     public Contract(String cotractNumber, String personName, String cpf, String email) {
         this.cotractNumber = cotractNumber;
         this.personName = personName;
@@ -14,7 +13,6 @@ public class Contract {
         this.email = email;
     }
 
-    // Getters e setters
     public String getCotractNumber() {
         return cotractNumber;
     }

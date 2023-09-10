@@ -10,7 +10,7 @@ public class DataBasePersist {
     private static final String USER = "postgres";
     private static final String PASS = "123456";
 
-    private Connection connection;
+    private final Connection connection;
 
     public DataBasePersist() throws SQLException {
         this.connection = DriverManager.getConnection(URL, USER, PASS);
