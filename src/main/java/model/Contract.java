@@ -1,6 +1,5 @@
 package model;
 public class Contract {
-
     private String cotractNumber;
     private String personName;
     private String cpf;
