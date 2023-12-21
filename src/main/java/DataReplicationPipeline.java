@@ -38,15 +38,15 @@ public class DataReplicationPipeline {
                 DataBasePersist databasePersist = new DataBasePersist();
                 Connection connection = databasePersist.getConnection();
 
-                PreparedStatement statement = connection.prepareStatement("INSERT INTO contracts (contractNumber, personName, cpf, email) VALUES (?, ?, ?, ?)");
-                statement.setString(1, contract.getCotractNumber());
+                PreparedStatement statement = connection.prepareStatement("INSERT INTO contracts_db.contracts (contractNumber, personName, cpf, email) VALUES (?, ?, ?, ?)");
+                statement.setString(1, contract.getContractNumber());
                 statement.setString(2, contract.getPersonName());
                 statement.setString(3, contract.getCpf());
                 statement.setString(4, contract.getEmail());
                 statement.executeUpdate();
 
                 databasePersist.closeConnection();
-                log.info("Inserted contract number: " + contract.getCotractNumber() + " into the database");
+                log.info("Inserted contract number: " + contract.getContractNumber() + " into the database");
             } else {
                 log.warning("Linha com formato inválido: " + linha);
             }
